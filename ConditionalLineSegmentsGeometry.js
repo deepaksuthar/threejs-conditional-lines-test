@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js';
-import { LineSegmentsGeometry } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/lines/LineSegmentsGeometry.js';
+import { LineSegmentsGeometry } from './LineSegmentsGeometry.js';
 
 export class ConditionalLineSegmentsGeometry extends LineSegmentsGeometry {
 
