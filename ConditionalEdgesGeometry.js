@@ -1,4 +1,4 @@
-import { BufferGeometry, Vector3, BufferAttribute, Triangle } from '//cdn.skypack.dev/three@0.130.1/build/three.module.js';
+import { BufferGeometry, Vector3, BufferAttribute, Triangle } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js';
 
 const vec0 = new Vector3();
 const vec1 = new Vector3();
