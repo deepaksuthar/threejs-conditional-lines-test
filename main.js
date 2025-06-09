@@ -45,7 +45,7 @@ loader.load('model.glb', gltf => {
 });
 
 // Helper: Merge meshes
-function mergeGLTFScene(group) {
+/*function mergeGLTFScene(group) {
   const meshes = [];
   group.traverse(c => c.isMesh && meshes.push(c));
   const geoms = meshes.map(m => {
@@ -59,7 +59,35 @@ function mergeGLTFScene(group) {
   mesh.castShadow = true;
   scene.add(mesh);
   return mesh;
+}*/
+
+function mergeGLTFScene(group) {
+  const meshes = [];
+  group.traverse(c => c.isMesh && meshes.push(c));
+
+  const geoms = meshes.map(m => {
+    m.updateMatrixWorld();
+
+    const g = m.geometry.clone().applyMatrix4(m.matrixWorld);
+
+    // Ensure all geometries have the same attributes (add dummy uv2 if missing)
+    if (!g.attributes.uv2 && g.attributes.uv) {
+      const uv2 = g.attributes.uv.clone();
+      g.setAttribute('uv2', uv2);
+    }
+
+    return BufferGeometryUtils.mergeVertices(g.toNonIndexed());
+  });
+
+  const combined = BufferGeometryUtils.mergeBufferGeometries(geoms, false);
+  combined.center();
+
+  const mesh = new THREE.Mesh(combined);
+  mesh.castShadow = true;
+  scene.add(mesh);
+  return mesh;
 }
+
 
 // Setup edges
 function setupEdges(mesh) {
