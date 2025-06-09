@@ -11,6 +11,8 @@ import { ConditionalLineSegmentsGeometry } from './ConditionalLineSegmentsGeomet
 import { ConditionalLineMaterial } from './ConditionalLineMaterial.js';
 
 let scene = new THREE.Scene();
+scene.background = new THREE.Color(0xffffff);
+
 let camera = new THREE.PerspectiveCamera(40, innerWidth/innerHeight, 0.1, 100);
 camera.position.set(0, 1.5, 3);
 let renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -99,7 +101,7 @@ function setupEdges(mesh) {
   scene.add(lines);
 
   const thickGeom = new ConditionalLineSegmentsGeometry().fromConditionalEdgesGeometry(condGeom);
-  const thickLines = new THREE.LineSegments2(thickGeom, new ConditionalLineMaterial({ color:0x000000, linewidth:2 }));
+  const thickLines = new THREE.LineSegments2(thickGeom, new ConditionalLineMaterial({ color:0x000000, linewidth:5 }));
   scene.add(thickLines);
 }
 
