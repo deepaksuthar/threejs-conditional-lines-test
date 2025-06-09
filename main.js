@@ -38,7 +38,8 @@ scene.add(floor);
 
 // Load GLB
 const loader = new GLTFLoader();
-loader.load('https://rawgit.com/KhronosGroup/glTF-Sample-Models/master/2.0/FlightHelmet/glTF/FlightHelmet.gltf', gltf => {
+//loader.load('https://rawgit.com/KhronosGroup/glTF-Sample-Models/master/2.0/FlightHelmet/glTF/FlightHelmet.gltf', gltf => {
+loader.load('model.glb', gltf => {
   const merged = mergeGLTFScene(gltf.scene);
   setupEdges(merged);
 });
