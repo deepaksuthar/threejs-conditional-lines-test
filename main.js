@@ -1,8 +1,7 @@
-import * as THREE from 'https://cdn.skypack.dev/three@0.130.1/build/three.module.js';
-
-import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/controls/OrbitControls.js';
-import { BufferGeometryUtils } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/utils/BufferGeometryUtils.js';
+import * as THREE from '//cdn.skypack.dev/three@0.130.1/build/three.module.js';
+import { GLTFLoader } from '//cdn.skypack.dev/three@0.130.1/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from '//cdn.skypack.dev/three@0.130.1/examples/jsm/controls/OrbitControls.js';
+import { BufferGeometryUtils } from '//cdn.skypack.dev/three@0.130.1/examples/jsm/utils/BufferGeometryUtils.js';
 
 // Core geometry/shader imports (local files)
 import { OutsideEdgesGeometry } from './OutsideEdgesGeometry.js';

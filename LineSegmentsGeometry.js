@@ -7,7 +7,7 @@ import {
 	Sphere,
 	Vector3,
 	WireframeGeometry
-} from 'https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js';
+} from '//cdn.skypack.dev/three@0.130.1/build/three.module.js';
 
 const _box = new Box3();
 const _vector = new Vector3();

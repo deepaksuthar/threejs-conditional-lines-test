@@ -3,7 +3,7 @@ import {
 	UniformsLib,
 	UniformsUtils,
 	Vector2
-} from 'https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js';
+} from '//cdn.skypack.dev/three@0.130.1/build/three.module.js';
 /**
  * parameters = {
  *  color: <hex>,
